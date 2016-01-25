@@ -1,2 +1,13 @@
 <h2>Hello</h2>
+
+<div class="row">
+
+    <% @products.each do |p| %>
+    <div class="col-md-3">
+        <%= p.title %>
+    </div>
+    <% end %>
+
+</div>
+
 <button class="btn btn-success" onClick="something()">Click me!</button>
