@@ -19,11 +19,12 @@ function add_to_cart(id)
 
     //вывод кол-во товара в корзине
     update_orders_input();
+    update_orders_button
 }
 
 function cart_get_number_of_items()
 {
-    var cmt = 0;
+    var cnt = 0;
 
     for(var i = 0; i < window.localStorage.length; i++)
     {
@@ -35,13 +36,20 @@ function cart_get_number_of_items()
             cnt = cnt + value * 1;
         }
     }
-    return orders;
+    return cnt;
 }
 
 function update_orders_input()
 {
     var orders = cart_get_orders();
     $('#orders_input').val(orders);
+
+}
+
+function update_orders_button()
+{
+    var text = 'Cart (' + cart_get_number_of_items() + ')';
+    $('#orders_button').val(text);
 
 }
 
