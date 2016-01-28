@@ -21,9 +21,9 @@ function add_to_cart(id)
     alert('Items in your cart: ' + cart_get_number_of_items());
 }
 
-function cart_get_number_of_items()
+function cart_get_orders()
 {
-    var cnt = 0;
+    var orders = 0;
 
     for(var i = 0; i < window.localStorage.length; i++)
     {
@@ -32,8 +32,8 @@ function cart_get_number_of_items()
 
         if(key.indexOf('product_') == 0)
         {
-            cnt = cnt + value * 1;
+            orders = orders + key + '=' + value + ',';
         }
     }
-    return cnt;
+    return orders;
 }
