@@ -55,7 +55,7 @@ function update_orders_button()
 
 function cart_get_orders()
 {
-    var orders = 0;
+    var orders = '';
 
     for(var i = 0; i < window.localStorage.length; i++)
     {
