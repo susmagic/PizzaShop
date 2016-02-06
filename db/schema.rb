@@ -14,11 +14,10 @@
 ActiveRecord::Schema.define(version: 20160206144652) do
 
   create_table "orders", force: :cascade do |t|
-    t.string   "title"
     t.text     "orders_input"
     t.text     "name"
     t.text     "phone"
-    t.text     "adress"
+    t.text     "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
